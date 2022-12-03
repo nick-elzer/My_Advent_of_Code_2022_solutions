@@ -1,6 +1,8 @@
 #getting data
 with open("day1.in") as file:
-    data = {i for i in file.read().strip().split("/n")}
+    data = [i for i in file.read().strip().split("\n")]
+
+print(data)
 
 max_cals = 0
 elf_cals = 0
