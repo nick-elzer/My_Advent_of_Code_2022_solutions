@@ -14,20 +14,11 @@ for line in lines:
         mychoicescore += 3
     
 # draw
-    if plays[0] == 'A' and plays[1] == 'X':
-        roundscore += 3
-    if plays[0] == 'B' and plays[1] == 'Y':
-        roundscore += 3
-    if plays[0] == 'C' and plays[1] == 'Z':
+    if (plays[0] == 'A' and plays[1] == 'X') or (plays[0] == 'B' and plays[1] == 'Y') or (plays[0] == 'C' and plays[1] == 'Z'):
         roundscore += 3
 # win
-    if plays[0] == 'A' and plays[1] == 'Y':
+    if (plays[0] == 'A' and plays[1] == 'Y') or (plays[0] == 'C' and plays[1] == 'X') or (plays[0] == 'B' and plays[1] == 'Z'):
         roundscore += 6
-    if plays[0] == 'C' and plays[1] == 'X':
-        roundscore += 6
-    if plays[0] == 'B' and plays[1] == 'Z':
-        roundscore += 6
-    # print(roundscore)
 
 print(mychoicescore + roundscore)
 
